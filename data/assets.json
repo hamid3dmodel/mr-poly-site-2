@@ -1,8 +1,8 @@
-﻿{
+{
   "assets": [
     {
       "id": "realistic-supermarket",
-      "name": "Realistic Supermarket",
+      "name": "Realistic Supermarket 213123",
       "slug": "realistic-supermarket",
       "style": "realistic",
       "category": "environments",
@@ -41,6 +41,44 @@
           "url": "https://www.blenderkit.com/"
         }
       ]
+    },
+    {
+      "id": "asset-1787335149379-24z43l23",
+      "name": "New Asset123123",
+      "slug": "new-asset",
+      "style": "low-poly",
+      "category": "environments",
+      "shortDescription": "",
+      "description": "",
+      "thumbnail": "",
+      "gallery": [],
+      "features": [],
+      "technicalSpecs": {
+        "polygons": "",
+        "textures": "",
+        "formats": "",
+        "engine": ""
+      },
+      "stores": []
+    },
+    {
+      "id": "realistic-supermarket2",
+      "name": "sadf3e45234",
+      "slug": "new-asset2313",
+      "style": "low-poly",
+      "category": "environments",
+      "shortDescription": "",
+      "description": "",
+      "thumbnail": "",
+      "gallery": [],
+      "features": [],
+      "technicalSpecs": {
+        "polygons": "",
+        "textures": "",
+        "formats": "",
+        "engine": ""
+      },
+      "stores": []
     }
   ]
 }

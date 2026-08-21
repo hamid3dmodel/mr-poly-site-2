@@ -56,10 +56,12 @@ type Props = {
         label?: string;
     };
 
-    value: EditableAsset;
+    // Accept any because Puck may pass different shapes; we normalize inside.
+    value: any;
 
+    // Accept any here as well for compatibility with Puck's onChange signature.
     onChange: (
-        value: EditableAsset,
+        value: any,
     ) => void;
 };
 
@@ -95,13 +97,8 @@ function slugify(
     return value
         .toLowerCase()
         .trim()
-        .replace(
-            /[^a-z0-9]+/g,
-            "-",
-        )
-        .replace(
-            /^-+|-+$/g,
-            "");
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
 }
 
 function createId() {
@@ -115,7 +112,11 @@ export default function AssetEditorField({
                                              value,
                                              onChange,
                                          }: Props) {
-    const asset = value || emptyAsset;
+    // Normalize incoming value: if it's an object with id/name use it, otherwise fallback.
+    const asset: EditableAsset =
+        value && typeof value === "object" && !Array.isArray(value)
+            ? (value as EditableAsset)
+            : emptyAsset;
 
     const [assets, setAssets] =
         useState<EditableAsset[]>([]);
@@ -664,9 +665,7 @@ export default function AssetEditorField({
                                         item.id
                                     }
                                 >
-                                    {
-                                        item.name
-                                    }
+                                    {item.name}
                                 </option>
                             ),
                         )}
@@ -1105,9 +1104,7 @@ export default function AssetEditorField({
                                 key={key}
                             >
                                 <label className="text-xs text-zinc-400">
-                                    {
-                                        label
-                                    }
+                                    {label}
                                 </label>
 
                                 <input
@@ -1222,9 +1219,7 @@ export default function AssetEditorField({
                 <div className="space-y-2 border-t border-white/10 pt-4">
                     {message && (
                         <div className="rounded-md bg-white/5 px-3 py-2 text-xs text-zinc-300">
-                            {
-                                message
-                            }
+                            {message}
                         </div>
                     )}
 

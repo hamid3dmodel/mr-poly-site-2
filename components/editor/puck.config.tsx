@@ -651,7 +651,7 @@ export const puckConfig: Config<Props> = {
                          level,
                          align,
                      }) => {
-                const Tag = level;
+                const Tag = level as any;
 
                 const sizeClass =
                     level === "h1"
@@ -989,12 +989,8 @@ export const puckConfig: Config<Props> = {
                              }) => (
                         <AssetEditorField
                             field={field}
-                            value={
-                                value
-                            }
-                            onChange={
-                                onChange
-                            }
+                            value={value}
+                            onChange={onChange}
                         />
                     ),
                 },
@@ -1031,8 +1027,9 @@ export const puckConfig: Config<Props> = {
             render: ({
                          asset,
                      }) => {
+                // Return an empty element instead of null to satisfy PuckComponent typing.
                 if (!asset) {
-                    return null;
+                    return <></>;
                 }
 
                 return (
@@ -1040,12 +1037,8 @@ export const puckConfig: Config<Props> = {
                         <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
                             {asset.thumbnail && (
                                 <img
-                                    src={
-                                        asset.thumbnail
-                                    }
-                                    alt={
-                                        asset.name
-                                    }
+                                    src={asset.thumbnail}
+                                    alt={asset.name}
                                     className="aspect-video w-full object-cover"
                                 />
                             )}
@@ -1053,30 +1046,21 @@ export const puckConfig: Config<Props> = {
                             <div className="p-8">
                                 <div className="mb-4 flex flex-wrap gap-2 text-xs">
                             <span className="rounded-full border border-white/10 px-3 py-1">
-                                {
-                                    asset.style
-                                }
+                                {asset.style}
                             </span>
 
                                     <span className="rounded-full border border-white/10 px-3 py-1">
-                                {
-                                    asset.category
-                                }
+                                {asset.category}
                             </span>
                                 </div>
 
                                 <h1 className="text-4xl font-bold tracking-tight">
-                                    {
-                                        asset.name ||
-                                        "Untitled Asset"
-                                    }
+                                    {asset.name || "Untitled Asset"}
                                 </h1>
 
                                 {asset.shortDescription && (
                                     <p className="mt-4 max-w-3xl text-lg leading-8 text-[var(--color-text-secondary)]">
-                                        {
-                                            asset.shortDescription
-                                        }
+                                        {asset.shortDescription}
                                     </p>
                                 )}
                             </div>

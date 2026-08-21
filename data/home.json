@@ -1,6 +1,13 @@
 {
   "root": {
-    "props": {}
+    "props": {
+      "title": "MR POLY",
+      "description": "",
+      "seoTitle": "",
+      "seoDescription": "",
+      "showHeader": "show",
+      "showFooter": "show"
+    }
   },
   "content": [
     {
@@ -16,6 +23,66 @@
         "image": "/uploads/e6297071-93ac-4d5f-9b25-20e19c62db03.jpg",
         "imageAlt": "MR POLY 3D Asset",
         "id": "Hero-cc6d959c-166c-477b-b417-c14ebf3815b8"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "content": [
+          {
+            "type": "Columns",
+            "props": {
+              "right": [
+                {
+                  "type": "Image",
+                  "props": {
+                    "image": "/uploads/185d201c-a169-4913-834c-51b750663c8b.png",
+                    "alt": "",
+                    "width": "small",
+                    "aspectRatio": "auto",
+                    "radius": 12,
+                    "id": "Image-596f459c-7004-4a99-ac0b-c4e29ddcf55d"
+                  }
+                }
+              ],
+              "left": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Heading",
+                    "level": "h2",
+                    "align": "left",
+                    "id": "Heading-197454dc-da40-4b40-8f3f-95b83489e498"
+                  }
+                },
+                {
+                  "type": "Spacer",
+                  "props": {
+                    "height": 32,
+                    "id": "Spacer-042dd5b2-366b-4494-adf5-681a12f88702"
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "text": "Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.Add your text here.",
+                    "align": "left",
+                    "id": "Text-e0a46948-583d-405b-8634-8f9e9c9b64fc"
+                  }
+                }
+              ],
+              "columns": "2",
+              "gap": 32,
+              "align": "center",
+              "id": "Columns-14f73954-87cd-4aef-906c-17bdbc5a89d3"
+            }
+          }
+        ],
+        "background": "transparent",
+        "paddingTop": 80,
+        "paddingBottom": 80,
+        "maxWidth": "xl",
+        "id": "Section-971d19a6-10c7-4222-932f-c2f7f0cd1181"
       }
     }
   ],

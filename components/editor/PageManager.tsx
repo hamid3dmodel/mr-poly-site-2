@@ -17,13 +17,9 @@ export default function PageManager() {
 
     useEffect(() => {
         async function loadPages() {
-            const response = await fetch(
-                "/api/editor/pages",
-            );
-
+            const response = await fetch("/api/editor/pages");
             const data = await response.json();
-
-            setPages(data.pages);
+            setPages(data.pages || []);
             setLoading(false);
         }
 
@@ -31,11 +27,7 @@ export default function PageManager() {
     }, []);
 
     if (loading) {
-        return (
-            <div className="p-10 text-white">
-                Loading pages...
-            </div>
-        );
+        return <div className="p-10 text-white">Loading pages...</div>;
     }
 
     return (
@@ -43,21 +35,26 @@ export default function PageManager() {
             <div className="mx-auto max-w-6xl px-8 py-16">
                 <div className="mb-10 flex items-center justify-between">
                     <div>
-                        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                            MR POLY
-                        </p>
+                        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">MR POLY</p>
 
-                        <h1 className="mt-2 text-4xl font-bold">
-                            Pages
-                        </h1>
+                        <h1 className="mt-2 text-4xl font-bold">Pages</h1>
                     </div>
 
-                    <button
-                        type="button"
-                        className="rounded-lg bg-white px-5 py-3 text-sm font-medium text-black hover:bg-zinc-200"
-                    >
-                        + New Page
-                    </button>
+                    <div className="flex gap-3">
+                        <Link
+                            href="/editor/assets"
+                            className="rounded-lg border border-white/10 px-4 py-3 text-sm hover:bg-white/5"
+                        >
+                            Manage Assets
+                        </Link>
+
+                        <button
+                            type="button"
+                            className="rounded-lg bg-white px-5 py-3 text-sm font-medium text-black hover:bg-zinc-200"
+                        >
+                            + New Page
+                        </button>
+                    </div>
                 </div>
 
                 <div className="grid gap-4">
@@ -67,13 +64,9 @@ export default function PageManager() {
                             className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] p-5"
                         >
                             <div>
-                                <h2 className="font-medium">
-                                    {page.title}
-                                </h2>
+                                <h2 className="font-medium">{page.title}</h2>
 
-                                <p className="mt-1 text-sm text-zinc-500">
-                                    {page.slug}
-                                </p>
+                                <p className="mt-1 text-sm text-zinc-500">{page.slug}</p>
                             </div>
 
                             <Link
