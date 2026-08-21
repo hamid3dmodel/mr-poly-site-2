@@ -1,0 +1,73 @@
+{
+  "root": {
+    "props": {
+      "title": "About MR POLY",
+      "description": "",
+      "seoTitle": "About MR POLY",
+      "seoDescription": "Learn more about MR POLY and our game-ready 3D assets.",
+      "showHeader": "show",
+      "showFooter": "show"
+    }
+  },
+  "content": [
+    {
+      "type": "Spacer",
+      "props": {
+        "height": 70,
+        "id": "Spacer-c8b532fd-b0e7-40ee-8fc7-9389e4a5298b"
+      }
+    },
+    {
+      "type": "Container",
+      "props": {
+        "content": [
+          {
+            "type": "Heading",
+            "props": {
+              "text": "About",
+              "level": "h2",
+              "align": "left",
+              "id": "Heading-41317b47-dede-49bc-940c-1e855c0a7b56"
+            }
+          }
+        ],
+        "maxWidth": "xl",
+        "paddingX": 100,
+        "id": "Container-b78cc7a1-3950-4720-9bfb-82a87fc772e5"
+      }
+    },
+    {
+      "type": "Spacer",
+      "props": {
+        "height": 32,
+        "id": "Spacer-1d6d5b11-c3c1-4d6d-9248-7a47c15f9ebe"
+      }
+    },
+    {
+      "type": "Container",
+      "props": {
+        "content": [
+          {
+            "type": "Text",
+            "props": {
+              "id": "Text-77de4839-5ed2-483e-a812-649ad5c43b05",
+              "text": "MR POLY creates 3D assets ranging from stylized low-poly models to detailed, high-quality realistic designs. Each asset features clean structure, optimized geometry, and full game-ready performance.\n",
+              "align": "left"
+            }
+          }
+        ],
+        "maxWidth": "xl",
+        "paddingX": 50,
+        "id": "Container-2f60742a-608c-4df3-adfb-831b7067929f"
+      }
+    },
+    {
+      "type": "Spacer",
+      "props": {
+        "height": 32,
+        "id": "Spacer-1737e396-3694-4cfe-9b19-48a498c6eae3"
+      }
+    }
+  ],
+  "zones": {}
+}

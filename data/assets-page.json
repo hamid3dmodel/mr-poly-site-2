@@ -1,0 +1,82 @@
+{
+  "root": {
+    "props": {
+      "title": "Assets",
+      "description": "Game-ready 3D assets.",
+      "seoTitle": "3D Assets — MR POLY",
+      "seoDescription": "Game-ready 3D assets by MR POLY.",
+      "showHeader": "show",
+      "showFooter": "show"
+    }
+  },
+  "content": [
+    {
+      "type": "Section",
+      "props": {
+        "content": [
+          {
+            "type": "Heading",
+            "props": {
+              "id": "Heading-assets-title",
+              "text": "3D Assets",
+              "level": "h1",
+              "align": "left"
+            }
+          },
+          {
+            "type": "Text",
+            "props": {
+              "id": "Text-assets-description",
+              "text": "Game-ready 3D assets ranging from stylized low-poly models to detailed realistic designs.",
+              "align": "left"
+            }
+          }
+        ],
+        "id": "Section-assets-header",
+        "background": "transparent",
+        "paddingTop": 48,
+        "paddingBottom": 48,
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "content": [
+          {
+            "type": "AssetList",
+            "props": {
+              "id": "AssetList-all-assets",
+              "title": "",
+              "description": "",
+              "selection": "all",
+              "style": "all",
+              "category": "all",
+              "selectedAssets": [],
+              "sort": "default",
+              "limit": 0,
+              "columns": "4",
+              "gap": 24,
+              "cardStyle": "bordered",
+              "cardRadius": 16,
+              "cardPadding": 20,
+              "imageAspect": "4/3",
+              "showImage": true,
+              "showBadges": true,
+              "showDescription": true,
+              "showButton": true,
+              "buttonText": "View Asset",
+              "imageHover": true
+            }
+          }
+        ],
+        "id": "Section-assets-list",
+        "background": "transparent",
+        "paddingTop": 0,
+        "paddingBottom": 80,
+        "maxWidth": "xl"
+      }
+    }
+  ],
+  "zones": {}
+}

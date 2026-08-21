@@ -1,0 +1,25 @@
+﻿{
+  "pages": [
+    {
+      "id": "home",
+      "slug": "/",
+      "title": "Home",
+      "dataFile": "home.json",
+      "published": true
+    },
+    {
+      "id": "about",
+      "slug": "/about",
+      "title": "About",
+      "dataFile": "about.json",
+      "published": true
+    },
+    {
+      "id": "assets",
+      "slug": "/assets",
+      "title": "Assets",
+      "dataFile": "assets-page.json",
+      "published": true
+    }
+  ]
+}

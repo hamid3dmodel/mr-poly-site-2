@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-background: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface-hover: #171717;
+
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Layout */
+  --container-width: 1280px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  border-radius: var(--radius-md);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+          background-color var(--transition-fast),
+          border-color var(--transition-fast),
+          color var(--transition-fast);
+}
+
+.btn-primary {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn-primary:hover {
+  background: #e5e5e5;
+  color: var(--color-black);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-border-hover);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-primary);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-primary);
+}
+
+/* =========================================================
+   Puck Editor Theme
+   ========================================================= */
+
+.mr-poly-puck-editor {
+  --puck-color-surface: #ffffff;
+  --puck-color-surface-muted: #f5f5f5;
+  --puck-color-surface-subtle: #fafafa;
+
+  --puck-color-border: #dcdcdc;
+  --puck-color-border-hover: #767676;
+  --puck-color-border-muted: #efefef;
+
+  --puck-color-text: #171717;
+  --puck-color-text-secondary: #404040;
+  --puck-color-text-muted: #525252;
+  --puck-color-text-subtle: #737373;
+
+  --puck-color-text-inverse: #ffffff;
+
+  --puck-color-interactive: #0158ad;
+  --puck-color-interactive-hover: #014292;
+  --puck-color-interactive-active: #002c77;
+
+  --puck-color-interactive-subtle: #e7eef7;
+  --puck-color-interactive-soft: #f3f6fb;
+  --puck-color-interactive-soft-hover: #f7faff;
+
+  --puck-color-focus-ring: #3479be;
+
+  --puck-color-selection-bg: rgba(171, 199, 229, 0.25);
+  --puck-color-selection-border: #8bb5df;
+
+  --puck-color-highlight: #0158ad;
+
+  --puck-outline-color-text-hover: #0158ad;
+  --puck-outline-color-drop-indicator: #0158ad;
+  --puck-outline-color-text-helper: #737373;
+
+  --puck-outline-font-family:
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif;
+
+  --puck-outline-icon-size: 16px;
+  --puck-outline-action-size: 20px;
+}
+
+/* Puck Media Field */
+
+.mr-poly-media-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.mr-poly-media-preview {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #111;
+}
+
+.mr-poly-media-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+button.mr-poly-upload-button {
+  appearance: none !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  min-height: 42px !important;
+
+  padding: 10px 16px !important;
+
+  border: 1px solid #444 !important;
+  border-radius: 8px !important;
+
+  background: #222 !important;
+  color: #ffffff !important;
+
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+
+  cursor: pointer !important;
+
+  transition:
+          background-color 150ms ease,
+          border-color 150ms ease !important;
+}
+
+button.mr-poly-upload-button:hover {
+  background: #333 !important;
+  border-color: #666 !important;
+}
+
+button.mr-poly-upload-button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+.mr-poly-file-input {
+  display: none !important;
+}

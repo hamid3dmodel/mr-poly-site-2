@@ -1,0 +1,23 @@
+{
+  "root": {
+    "props": {}
+  },
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "eyebrow": "MR POLY",
+        "title": "Game-Ready 3D Assets",
+        "description": "Stylized low-poly and detailed realistic 3D assets built for games and real-time experiences.",
+        "primaryButtonText": "Explore Assets",
+        "primaryButtonHref": "/assets",
+        "secondaryButtonText": "About MR POLY",
+        "secondaryButtonHref": "/about",
+        "image": "/uploads/e6297071-93ac-4d5f-9b25-20e19c62db03.jpg",
+        "imageAlt": "MR POLY 3D Asset",
+        "id": "Hero-cc6d959c-166c-477b-b417-c14ebf3815b8"
+      }
+    }
+  ],
+  "zones": {}
+}
